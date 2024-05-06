@@ -15,7 +15,7 @@ fun main() {
         }
 
         with(Period.between(input, LocalDate.now())){
-            println("The difference between current date and your sate is ${difference.years} years")
+            println("The difference between current date and your sate is ${this.years} years")
 
         }
     }
