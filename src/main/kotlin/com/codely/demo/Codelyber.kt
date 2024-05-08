@@ -13,15 +13,11 @@ fun main() {
             println("You wrote $it")
 
         }
-
         with(Period.between(input, LocalDate.now())){
             println("The difference between current date and your sate is ${this.years} years")
 
         }
     }
-
-
-
 }
 
 fun supportNullableString(line: String?) = line
