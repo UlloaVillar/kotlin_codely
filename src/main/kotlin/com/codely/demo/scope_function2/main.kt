@@ -10,7 +10,7 @@ fun main() {
         //null, ponemos el ? para no coger el null
         it.isNullOrEmpty() || it.isNullOrBlank()
     }?.let{
-        println("$it")
+        println(it)
         LocalDate.parse(it)
     }.apply { // recibimos el parsed localdate y devolvemos error encaso de que no sea localDate
         // Sirve para hacer mutaciones
