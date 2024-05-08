@@ -22,15 +22,15 @@ fun main() {
         }
     }.also {
         println("You wrote $it")
-    }.run {
-        with(Period.between(this, LocalDate.now())){
-            when { // coge el contexto del with y es un if else if else if
-                years > 0 -> println("The difference between the date you wrote an today is ${this.years} years")
-                months > 0 -> println("The difference between the date you wrote an today is ${this.months} months")
-                days > 0 -> println("The difference between the date you wrote an today is ${this.days} days")
-            }
-        }
-
+    }?.run {
+        this.calculateDifference()
     }
 
+}
+private fun LocalDate.calculateDifference() = with(Period.between(this, LocalDate.now())){
+    when { // coge el contexto del with y es un if else if else if
+        years > 0 -> println("The difference between the date you wrote an today is ${this.years} years")
+        months > 0 -> println("The difference between the date you wrote an today is ${this.months} months")
+        days > 0 -> println("The difference between the date you wrote an today is ${this.days} days")
+    }
 }
